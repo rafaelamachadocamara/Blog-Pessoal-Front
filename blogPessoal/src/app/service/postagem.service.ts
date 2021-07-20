@@ -16,23 +16,23 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('https://apirest-blog.herokuapp.com/postagem', this.token)
+    return this.http.get<Postagem[]>('https://blog-apirest.herokuapp.com/postagem', this.token)
   }
 
 getByIdPostagem(id: number): Observable<Postagem>{
-return this.http.get<Postagem>(`https://apirest-blog.herokuapp.com/postagem/${id}`, this.token)
+return this.http.get<Postagem>(`https://blog-apirest.herokuapp.com/postagem/${id}`, this.token)
 }
 
 postPostagem(postagem: Postagem): Observable<Postagem>{
-  return this.http.post<Postagem>('https://apirest-blog.herokuapp.com/postagem', postagem, this.token)
+  return this.http.post<Postagem>('https://blog-apirest.herokuapp.com/postagem', postagem, this.token)
 }
 
 putPostagem(postagem: Postagem): Observable<Postagem>{
-  return this.http.put<Postagem>('https://apirest-blog.herokuapp.com/postagem', postagem, this.token)
+  return this.http.put<Postagem>('https://blog-apirest.herokuapp.com/postagem', postagem, this.token)
 }
 
 deletePostagem(id:number){
-  return this.http.delete(`https://apirest-blog.herokuapp.com/postagem/${id}`, this.token)
+  return this.http.delete(`https://blog-apirest.herokuapp.com/postagem/${id}`, this.token)
 }
 
 }
